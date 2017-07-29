@@ -6,7 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-pure-lightbox.js'
+    filename: 'vue-pure-lightbox.js',
+    library: 'vue-pure-lightbox',
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
