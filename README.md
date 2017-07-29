@@ -11,7 +11,7 @@ npm i vue-pure-lightbox --save
 
 ### Using a CDN:
 ```html
-<script src="https://unpkg.com/vue-pure-lightbox@1.0.0/dist/lightbox.js"></script>
+<script src="https://unpkg.com/vue-pure-lightbox@1.0.0/dist/vue-pure-lightbox.js"></script>
 ```
 
 ## Usage
