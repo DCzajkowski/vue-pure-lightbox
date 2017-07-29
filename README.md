@@ -46,11 +46,11 @@ Then in any of your components
 
 ### Available props:
 
-| Prop          | Type     | Value                                           |
-| ------------- | -------- | ----------------------------------------------- |
-| thumbnail     | string   | Path to a file being your thumbnail             |
-| images        | string[] | Array of paths to files visible in the lightbox |
-| alternateText | string   | **(Optional)** alt="" text for your image       |
+| Prop           | Type     | Value                                           |
+| -------------- | -------- | ----------------------------------------------- |
+| thumbnail      | string   | Path to a file being your thumbnail             |
+| images         | string[] | Array of paths to files visible in the lightbox |
+| alternate-text | string   | **(Optional)** alt="" text for your image       |
 
 ---
 
