@@ -1,7 +1,7 @@
 import LightboxComponent from './Components/Lightbox.vue'
 import { object_merge } from './helpers.js'
 
-const Lightbox = {
+var Lightbox = {
     install(Vue, options = {}) {
         Vue.mixin({
             computed: {
@@ -24,5 +24,3 @@ const Lightbox = {
 // }
 
 window.Lightbox = Lightbox
-
-module.exports = Lightbox

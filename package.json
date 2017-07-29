@@ -1,6 +1,6 @@
 {
   "name": "vue-pure-lightbox",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Very lightweight, JavaScript-only, lightbox plugin for Vue.js",
   "main": "dist/vue-pure-lightbox.js",
   "scripts": {
