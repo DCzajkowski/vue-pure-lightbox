@@ -20,4 +20,5 @@ const Lightbox = {
 }
 
 window.Lightbox = Lightbox
-module.exports = Lightbox
+exports["default"] = Lightbox
+module.exports = exports["default"]
