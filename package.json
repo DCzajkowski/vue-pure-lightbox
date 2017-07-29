@@ -1,13 +1,27 @@
 {
   "name": "vue-pure-lightbox",
+  "version": "0.0.1",
   "description": "Very lightweight, JavaScript-only, lightbox plugin for Vue.js",
-  "version": "1.1.0",
-  "author": "Dariusz Czajkowski <dare.czajkowski@gmail.com>",
-  "private": true,
+  "main": "dist/lightbox.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCzajkowski/vue-pure-lightbox.git"
+  },
+  "keywords": [
+    "vue",
+    "vue.js",
+    "lightbox"
+  ],
+  "author": "Dariusz Czajkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCzajkowski/vue-pure-lightbox/issues"
+  },
+  "homepage": "https://github.com/DCzajkowski/vue-pure-lightbox#readme",
   "dependencies": {
     "vue": "^2.3.3"
   },
