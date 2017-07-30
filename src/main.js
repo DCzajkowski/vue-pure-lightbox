@@ -17,4 +17,4 @@ const Lightbox = {
 window.Lightbox = Lightbox
 
 export { Lightbox }
-export default { Lightbox }
+export default Lightbox

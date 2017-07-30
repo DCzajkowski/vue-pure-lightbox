@@ -1,8 +1,7 @@
-# Work in Progress.
-
----
-
 # Pure JS lightbox component for Vue.js
+## Demo
+The live demo is available here: [https://codepen.io/DCzajkowski/pen/rzOErW](https://codepen.io/DCzajkowski/pen/rzOErW).
+
 ## Installation
 ### For Webpack:
 ```bash
@@ -11,12 +10,15 @@ npm i vue-pure-lightbox --save
 
 ### Using a CDN:
 ```html
-<script src="https://unpkg.com/vue-pure-lightbox@1.0.0/dist/vue-pure-lightbox.js"></script>
+<!-- In <head> -->
+<meta rel="stylesheet" href="https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox.css">
+<!-- In <body>, after Vue import -->
+<script src="https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox.js"></script>
 ```
 
 ## Usage
-### With Webpack
-In your `main.js` file
+### With ES6 bundler
+In your index file
 ```js
 import Lightbox from 'vue-pure-lightbox'
 Vue.use(Lightbox)
@@ -25,9 +27,10 @@ Vue.use(Lightbox)
 ### With CDN
 ```html
 <script>
-    Vue.use(Lightbox, {
-        leftArrowIcon: 'https://unpkg.com/vue-pure-lightbox@1.0.0/dist/left-arrow.svg',
-        rightArrowIcon: 'https://unpkg.com/vue-pure-lightbox@1.0.0/dist/right-arrow.svg',
+    Vue.use(Lightbox)
+
+    new Vue({
+        // ...
     })
 </script>
 ```
@@ -37,8 +40,8 @@ Vue.use(Lightbox)
 Then in any of your components
 ```html
 <lightbox
-  thumbnail="/path/to/thumbnail.jpg"
-  :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
+    thumbnail="/path/to/thumbnail.jpg"
+    :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
 ></lightbox>
 ```
 
@@ -52,22 +55,6 @@ Then in any of your components
 | images         | string[] | Array of paths to files visible in the lightbox |
 | alternate-text | string   | **(Optional)** alt="" text for your image       |
 
----
-
-### Available configuration:
-| Prop           | Type   | Value                                           |
-| -------------- | ------ | ----------------------------------------------- |
-| leftArrowIcon  | string | Path to a file with a left arrow                |
-| rightArrowIcon | string | Path to a file with a right arrow               |
-
-To override default configuration pass an object as a second argument to the `Vue.use()` statement as follows:
-```js
-Vue.use(Lightbox, {
-  leftArrowIcon: '/path/to/the/file.svg',
-  rightArrowIcon: '/path/to/the/file.svg',
-})
-```
-
 ## Contents
 This package consists of just one `.vue` file. It is meant to be as small and simple as possible.
 In return you get a `<lightbox>` Vue component that allows you to show images in a nice, responsive lightbox.
@@ -78,7 +65,7 @@ Supported keys:
 - Escape key - Close the modal
 - Arrow up, Arrow down and a Space Bar - inactive when the lightbox is visible
 
-I do use CSS in the component, but each class is prefixed with a `lightox` keyword. :)
+CSS is being used in the component, but each class is prefixed with a `lightbox` keyword. You can overwrite them as you wish.
 
 ## License
 Just use it. For free. Forever.

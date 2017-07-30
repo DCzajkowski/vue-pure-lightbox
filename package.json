@@ -1,9 +1,10 @@
 {
   "name": "vue-pure-lightbox",
-  "version": "0.0.12",
+  "version": "2.0.0",
   "description": "Very lightweight, JavaScript-only, lightbox plugin for Vue.js",
   "main": "dist-module/main.js",
   "scripts": {
+    "prepublish": "npm run build && npm run browser-build",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "browser-build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/vue-pure-lightbox.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/vue-pure-lightbox.js"
@@ -27,7 +28,7 @@
     "lightbox"
   ],
   "author": "Dariusz Czajkowski",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DCzajkowski/vue-pure-lightbox/issues"
   },
