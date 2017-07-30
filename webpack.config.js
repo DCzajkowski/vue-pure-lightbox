@@ -4,9 +4,11 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'vue-pure-lightbox.js'
+    path: path.resolve(__dirname, './dist-module'),
+    publicPath: '/dist-module/',
+    filename: 'main.js',
+    library: 'es6Module',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
