@@ -3,12 +3,12 @@
 The live demo is available here: [https://codepen.io/DCzajkowski/pen/rzOErW](https://codepen.io/DCzajkowski/pen/rzOErW).
 
 ## Installation
-### For Webpack:
+### With npm:
 ```bash
 npm i vue-pure-lightbox --save
 ```
 
-### Using a CDN:
+### With a CDN:
 ```html
 <!-- In <head> -->
 <meta rel="stylesheet" href="https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox.css">
@@ -17,14 +17,14 @@ npm i vue-pure-lightbox --save
 ```
 
 ## Usage
-### With ES6 bundler
+### With an ES6 bundler (via npm)
 In your index file
 ```js
 import Lightbox from 'vue-pure-lightbox'
 Vue.use(Lightbox)
 ```
 
-### With CDN
+### With a CDN
 ```html
 <script>
     Vue.use(Lightbox)
