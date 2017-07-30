@@ -1,15 +1,26 @@
-<p align="center">
-    <h1>Pure JS lightbox component for Vue.js</h1>
-    <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/dt/vue-pure-lightbox.svg" alt="Downloads"></a>
-    <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/v/vue-pure-lightbox.svg" alt="Version"></a>
-    <a href="https://spdx.org/licenses/MIT.html"><img src="https://img.shields.io/npm/l/vue-pure-lightbox.svg" alt="License"></a>
-</p>
+# Pure JS lightbox component for Vue.js
+<a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/dt/vue-pure-lightbox.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/v/vue-pure-lightbox.svg" alt="Version"></a>
+<a href="https://spdx.org/licenses/MIT.html"><img src="https://img.shields.io/npm/l/vue-pure-lightbox.svg" alt="License"></a>
+
+## Table of contents
+* [Demo](#demo)
+* [Installation](#installation)
+    * [With NPM](#with-npm)
+    * [With a CDN](#with-a-cdn)
+* [Usage](#usage)
+    * [With an ES6 bundler (via NPM)](#with-an-es6-bundler-via-npm)
+    * [With a CDN](#with-a-cdn)
+    * [Available props](#available-props)
+* [Contents](#contents)
+* [License](#license)
+* [Issues](#issues)
 
 ## Demo
 The live demo is available here: [https://codepen.io/DCzajkowski/pen/rzOErW](https://codepen.io/DCzajkowski/pen/rzOErW).
 
 ## Installation
-### With npm:
+### With NPM:
 ```bash
 npm i vue-pure-lightbox --save
 ```
@@ -23,7 +34,7 @@ npm i vue-pure-lightbox --save
 ```
 
 ## Usage
-### With an ES6 bundler (via npm)
+### With an ES6 bundler (via NPM)
 In your index file
 ```js
 import Lightbox from 'vue-pure-lightbox'
@@ -76,5 +87,5 @@ CSS is being used in the component, but each class is prefixed with a `lightbox`
 ## License
 Just use it. For free. Forever.
 
-## Bugs
+## Issues
 If you find any bug or problem with the plugin please open an issue or create a pull request on the [Github repo](https://github.com/DCzajkowski/vue-lightbox).
