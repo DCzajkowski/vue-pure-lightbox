@@ -2,7 +2,7 @@
     <h1>Pure JS lightbox component for Vue.js</h1>
     <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/dt/vue-pure-lightbox.svg" alt="Downloads"></a>
     <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/v/vue-pure-lightbox.svg" alt="Version"></a>
-    <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/l/vue-pure-lightbox.svg" alt="License"></a>
+    <a href="https://spdx.org/licenses/MIT.html"><img src="https://img.shields.io/npm/l/vue-pure-lightbox.svg" alt="License"></a>
 </p>
 
 ## Demo
