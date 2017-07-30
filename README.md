@@ -88,4 +88,4 @@ CSS is being used in the component, but each class is prefixed with a `lightbox`
 Just use it. For free. Forever.
 
 ## Issues
-If you find any bug or problem with the plugin please open an issue or create a pull request on the [Github repo](https://github.com/DCzajkowski/vue-lightbox).
+If you find any bug or problem with the plugin please open an issue or create a pull request on the [Github repo](https://github.com/DCzajkowski/vue-pure-lightbox).
