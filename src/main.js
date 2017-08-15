@@ -12,9 +12,8 @@ const Lightbox = {
 
 if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(Lightbox);
+    window.Lightbox = Lightbox
 }
-
-window.Lightbox = Lightbox
 
 export { Lightbox }
 export default Lightbox
