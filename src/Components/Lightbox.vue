@@ -48,26 +48,10 @@
             }
         },
         mounted() {
-            window.addEventListener('keydown', (e) => {
-                if (this.visible) {
-                    switch (e.key) {
-                        case 'ArrowRight':
-                            this.next()
-                            break
-                        case 'ArrowLeft':
-                            this.prev()
-                            break
-                        case 'ArrowDown':
-                        case 'ArrowUp':
-                        case ' ':
-                            e.preventDefault()
-                            break
-                        case 'Escape':
-                            this.hide()
-                            break
-                    }
-                }
-            })
+            window.addEventListener('keydown', this.eventListener)
+        },
+        destroyed() {
+            window.removeEventListener('keydown', this.eventListener)
         },
         methods: {
             show() {
@@ -92,6 +76,26 @@
             next() {
                 if (this.has_next()) {
                     this.index += 1
+                }
+            },
+            eventListener(e) {
+                if (this.visible) {
+                    switch (e.key) {
+                        case 'ArrowRight':
+                            this.next()
+                            break
+                        case 'ArrowLeft':
+                            this.prev()
+                            break
+                        case 'ArrowDown':
+                        case 'ArrowUp':
+                        case ' ':
+                            e.preventDefault()
+                            break
+                        case 'Escape':
+                            this.hide()
+                            break
+                    }
                 }
             },
         },
