@@ -85,6 +85,10 @@
                 }
             },
             tick() {
+                if (!this.$slots.loader) {
+                    return
+                }
+
                 this.displayImage = false
 
                 Vue.nextTick(() => {
