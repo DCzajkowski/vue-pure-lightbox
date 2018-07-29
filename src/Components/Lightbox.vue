@@ -17,7 +17,8 @@
                     </svg>
                 </div>
                 <div class="lightbox__image" @click.stop="">
-                    <img :src="images[index]">
+                    <slot name="loader" v-if="$slots.loader"></slot>
+                    <img :src="images[index]" @load="loaded" v-if="displayImage">
                 </div>
                 <div
                     class="lightbox__arrow lightbox__arrow--right"
@@ -35,6 +36,8 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+
     export default {
         props: [
             'thumbnail',
@@ -45,6 +48,7 @@
             return {
                 visible: false,
                 index: 0,
+                displayImage: true,
             }
         },
         mounted() {
@@ -71,12 +75,21 @@
             prev() {
                 if (this.has_prev()) {
                     this.index -= 1
+                    this.tick()
                 }
             },
             next() {
                 if (this.has_next()) {
                     this.index += 1
+                    this.tick()
                 }
+            },
+            tick() {
+                this.displayImage = false
+
+                Vue.nextTick(() => {
+                    this.displayImage = true
+                })
             },
             eventListener(e) {
                 if (this.visible) {
@@ -163,6 +176,7 @@
     .lightbox__image {
         flex: 1;
     }
+
     .lightbox__image img {
         width: 100%;
         height: auto !important;

@@ -1,10 +1,12 @@
 import LightboxComponent from './Components/Lightbox.vue'
+import LightboxDefaultLoader from './Components/LightboxDefaultLoader.vue'
 
 const Lightbox = {
     install(Vue, options = {}) {
         Vue.mixin({
             components: {
                 lightbox: LightboxComponent,
+                LightboxDefaultLoader,
             },
         });
     },
