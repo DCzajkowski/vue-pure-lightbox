@@ -59,7 +59,10 @@ Then in any of your components
 <lightbox
     thumbnail="/path/to/thumbnail.jpg"
     :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
-></lightbox>
+>
+    <lightbox-default-loader slot="loader"></lightbox-default-loader> <!-- If you want to use built-in loader -->
+    <!-- <div slot="loader"></div> --> <!-- If you want to use your own loader -->
+</lightbox>
 ```
 
 ---
