@@ -55,7 +55,7 @@ Vue.use(Lightbox)
 ---
 
 Then in any of your components
-```html
+```vue
 <lightbox
     thumbnail="/path/to/thumbnail.jpg"
     :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
