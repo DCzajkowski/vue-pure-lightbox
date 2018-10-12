@@ -8,8 +8,8 @@
             <div class="lightbox__element" @click.stop="">
                 <div
                     class="lightbox__arrow lightbox__arrow--left"
-                    @click.stop.prevent="prev"
-                    :class="{'lightbox__arrow--invisible': ! has_prev()}"
+                    @click.stop.prevent="previous"
+                    :class="{ 'lightbox__arrow--invisible': !hasPrevious }"
                 >
                     <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
@@ -23,7 +23,7 @@
                 <div
                     class="lightbox__arrow lightbox__arrow--right"
                     @click.stop.prevent="next"
-                    :class="{'lightbox__arrow--invisible': ! has_next()}"
+                    :class="{ 'lightbox__arrow--invisible': !hasNext }"
                 >
                     <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
@@ -51,11 +51,13 @@
                 displayImage: true,
             }
         },
-        mounted() {
-            window.addEventListener('keydown', this.eventListener)
-        },
-        destroyed() {
-            window.removeEventListener('keydown', this.eventListener)
+        computed: {
+            hasNext() {
+                return (this.index + 1 < this.images.length)
+            },
+            hasPrevious() {
+                return (this.index - 1 >= 0)
+            },
         },
         methods: {
             show() {
@@ -66,20 +68,14 @@
                 this.visible = false
                 this.index = 0
             },
-            has_next() {
-                return (this.index + 1 < this.images.length)
-            },
-            has_prev() {
-                return (this.index - 1 >= 0)
-            },
-            prev() {
-                if (this.has_prev()) {
+            previous() {
+                if (this.hasPrevious) {
                     this.index -= 1
                     this.tick()
                 }
             },
             next() {
-                if (this.has_next()) {
+                if (this.hasNext) {
                     this.index += 1
                     this.tick()
                 }
@@ -99,22 +95,24 @@
                 if (this.visible) {
                     switch (e.key) {
                         case 'ArrowRight':
-                            this.next()
-                            break
+                            return this.next()
                         case 'ArrowLeft':
-                            this.prev()
-                            break
+                            return this.previous()
                         case 'ArrowDown':
                         case 'ArrowUp':
                         case ' ':
-                            e.preventDefault()
-                            break
+                            return e.preventDefault()
                         case 'Escape':
-                            this.hide()
-                            break
+                            return this.hide()
                     }
                 }
             },
+        },
+        mounted() {
+            window.addEventListener('keydown', this.eventListener)
+        },
+        destroyed() {
+            window.removeEventListener('keydown', this.eventListener)
         },
     }
 </script>
