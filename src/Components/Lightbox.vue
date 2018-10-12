@@ -18,7 +18,7 @@
                 </div>
                 <div class="lightbox__image" @click.stop="">
                     <slot name="loader" v-if="$slots.loader"></slot>
-                    <img :src="images[index]" @load="loaded" v-if="displayImage">
+                    <img :src="images[index]" v-if="displayImage">
                 </div>
                 <div
                     class="lightbox__arrow lightbox__arrow--right"
