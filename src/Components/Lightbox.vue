@@ -46,10 +46,11 @@
             'thumbnail',
             'images',
             'alternateText',
+            'show'
         ],
         data() {
             return {
-                visible: false,
+                visible: this.show ? true : false,
                 index: 0,
                 displayImage: true,
             }
