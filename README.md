@@ -75,6 +75,12 @@ Then in any of your components
 | images         | string[] | Array of paths to files visible in the lightbox |
 | alternate-text | string   | **(Optional)** alt="" text for your image       |
 
+### Available slots:
+| Slot    | Description                                   | Default                              |
+| ------- | --------------------------------------------- | ------------------------------------ |
+| content | Default value is hen you don't want a def     | &lt;img&gt; tag with src set to path |
+| loader  | DOM to be used when there is an image loading | No loader                            |
+
 ## Contents
 This package consists of just one `.vue` file. It is meant to be as small and simple as possible.
 In return you get a `<lightbox>` Vue component that allows you to show images in a nice, responsive lightbox.
