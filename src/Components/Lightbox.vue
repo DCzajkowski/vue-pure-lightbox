@@ -74,6 +74,9 @@
       },
     },
     watch: {
+      value(newValue) {
+        this.visible = newValue
+      },
       visible(newVisibility) {
         this.$emit('input', newVisibility)
       },
