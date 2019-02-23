@@ -95,6 +95,7 @@ Vue.use(Lightbox)
 | thumbnail      | string            | Path to a file being your thumbnail             |
 | images         | string[] or array | Array of paths to files visible in the lightbox |
 | alternate-text | string            | **(Optional)** alt="" text for your image       |
+| value          | boolean           | **(Optional)** reactive visibility prop         |
 
 ### Available slots:
 | Slot    | Description                                   | Default                              |
