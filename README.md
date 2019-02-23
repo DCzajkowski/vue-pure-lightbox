@@ -6,12 +6,12 @@
 ## Table of contents
 * [Demo](#demo)
 * [Installation](#installation)
-    * [With NPM](#with-npm)
-    * [With a CDN](#with-a-cdn)
+  * [With NPM](#with-npm)
+  * [With a CDN](#with-a-cdn)
 * [Usage](#usage)
-    * [With an ES6 bundler (via NPM)](#with-an-es6-bundler-via-npm)
-    * [With a CDN](#with-a-cdn)
-    * [Available props](#available-props)
+  * [With an ES6 bundler (via NPM)](#with-an-es6-bundler-via-npm)
+  * [With a CDN](#with-a-cdn)
+  * [Available props](#available-props)
 * [Contents](#contents)
 * [License](#license)
 * [Issues](#issues)
@@ -44,11 +44,11 @@ Vue.use(Lightbox)
 ### With a CDN
 ```html
 <script>
-    Vue.use(Lightbox)
+  Vue.use(Lightbox)
 
-    new Vue({
-        // ...
-    })
+  new Vue({
+    // ...
+  })
 </script>
 ```
 
@@ -57,11 +57,11 @@ Vue.use(Lightbox)
 Then in any of your components
 ```vue
 <lightbox
-    thumbnail="/path/to/thumbnail.jpg"
-    :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
+  thumbnail="/path/to/thumbnail.jpg"
+  :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
 >
-    <lightbox-default-loader slot="loader"></lightbox-default-loader> <!-- If you want to use built-in loader -->
-    <!-- <div slot="loader"></div> --> <!-- If you want to use your own loader -->
+  <lightbox-default-loader slot="loader"></lightbox-default-loader> <!-- If you want to use built-in loader -->
+  <!-- <div slot="loader"></div> --> <!-- If you want to use your own loader -->
 </lightbox>
 ```
 
