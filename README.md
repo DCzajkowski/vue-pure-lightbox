@@ -11,7 +11,10 @@
 * [Usage](#usage)
   * [With an ES6 bundler (via NPM)](#with-an-es6-bundler-via-npm)
   * [With a CDN](#with-a-cdn)
+  * [Simple example](#simple-example)
+  * [Simple example with content slot](#simple-example-with-content-slot)
   * [Available props](#available-props)
+  * [Available slots](#available-slots)
 * [Contents](#contents)
 * [License](#license)
 * [Issues](#issues)
@@ -54,7 +57,8 @@ Vue.use(Lightbox)
 
 ---
 
-Then in any of your components
+### Simple example
+
 ```vue
 <lightbox
   thumbnail="/path/to/thumbnail.jpg"
@@ -65,15 +69,32 @@ Then in any of your components
 </lightbox>
 ```
 
+### Simple example with content slot
+
+```vue
+<lightbox
+  thumbnail="https://via.placeholder.com/350x150"
+  :images="[
+    { link: 'https://placekitten.com/1080/910', alt: 'Cat 1' },
+    { link: 'https://placekitten.com/1080/920', alt: 'Cat 2' },
+  ]"
+>
+  <lightbox-default-loader slot="loader"></lightbox-default-loader>
+  <div slot="content" slot-scope="{ url: { link, alt } }">
+    <img :src="link" :alt="alt">
+  </div>
+</lightbox>
+```
+
 ---
 
 ### Available props:
 
-| Prop           | Type     | Value                                           |
-| -------------- | -------- | ----------------------------------------------- |
-| thumbnail      | string   | Path to a file being your thumbnail             |
-| images         | string[] | Array of paths to files visible in the lightbox |
-| alternate-text | string   | **(Optional)** alt="" text for your image       |
+| Prop           | Type              | Value                                           |
+| -------------- | ----------------- | ----------------------------------------------- |
+| thumbnail      | string            | Path to a file being your thumbnail             |
+| images         | string[] or array | Array of paths to files visible in the lightbox |
+| alternate-text | string            | **(Optional)** alt="" text for your image       |
 
 ### Available slots:
 | Slot    | Description                                   | Default                              |
