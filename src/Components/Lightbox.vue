@@ -42,14 +42,25 @@
   import Vue from 'vue'
 
   export default {
-    props: [
-      'thumbnail',
-      'images',
-      'alternateText',
-    ],
+    props: {
+      thumbnail: {
+        type: String,
+      },
+      images: {
+        type: Array,
+      },
+      alternateText: {
+        type: String,
+        default: '',
+      },
+      value: {
+        type: Boolean,
+        default: false,
+      },
+    },
     data() {
       return {
-        visible: false,
+        visible: this.value,
         index: 0,
         displayImage: true,
       }
@@ -60,6 +71,11 @@
       },
       hasPrevious() {
         return (this.index - 1 >= 0)
+      },
+    },
+    watch: {
+      visible(newVisibility) {
+        this.$emit('input', newVisibility)
       },
     },
     methods: {
