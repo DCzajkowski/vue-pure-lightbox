@@ -98,10 +98,13 @@ Vue.use(Lightbox)
 | value          | boolean           | **(Optional)** reactive visibility prop         |
 
 ### Available slots:
-| Slot    | Description                                   | Default                              |
-| ------- | --------------------------------------------- | ------------------------------------ |
-| content | Default value is hen you don't want a def     | &lt;img&gt; tag with src set to path |
-| loader  | DOM to be used when there is an image loading | No loader                            |
+| Slot          | Description                                    | Default                              |
+| ------------- | ---------------------------------------------- | ------------------------------------ |
+| content       | Default value is hen you don't want a def      | &lt;img&gt; tag with src set to path |
+| loader        | DOM to be used when there is an image loading  | No loader                            |
+| icon-close    | Icon to be used as a close button              | &times;                              |
+| icon-previous | Icon to be used as the "next" arrow button     | <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg> |
+| icon-next     | Icon to be used as the "previous" arrow button | <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg> |
 
 ## Contents
 This package consists of just one `.vue` file. It is meant to be as small and simple as possible.
