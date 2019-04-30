@@ -5,7 +5,7 @@
     </a>
     <div class="lightbox" v-if="visible" @click="hide">
       <div class="lightbox__close" @click="hide">
-        <slot name="close">&times;</slot>
+        <slot name="icon-close">&times;</slot>
       </div>
       <div class="lightbox__element" @click.stop="">
         <div
@@ -13,7 +13,7 @@
           @click.stop.prevent="previous"
           :class="{ 'lightbox__arrow--invisible': !hasPrevious }"
         >
-          <slot name="previous">
+          <slot name="icon-previous">
             <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
               <path d="M0-.5h24v24H0z" fill="none"/>
@@ -32,7 +32,7 @@
           @click.stop.prevent="next"
           :class="{ 'lightbox__arrow--invisible': !hasNext }"
         >
-          <slot name="next">
+          <slot name="icon-next">
             <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
               <path d="M0-.25h24v24H0z" fill="none"/>
