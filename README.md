@@ -93,6 +93,7 @@ Vue.use(VuePureLightbox)
 | images         | string[] or array | Array of paths to files visible in the lightbox |
 | alternate-text | string            | **(Optional)** alt="" text for your image       |
 | value          | boolean           | **(Optional)** reactive visibility prop         |
+| openAt         | integer           | **(Optional)** index of image to show on open   |
 
 ### Available slots:
 | Slot          | Description                                    | Default                              |
