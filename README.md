@@ -76,8 +76,8 @@ Vue.use(VuePureLightbox)
     { link: 'https://placekitten.com/1080/920', alt: 'Cat 2' },
   ]"
 >
-  <div slot:loader>Loading…</div>
-  <div slot:content="{ url: { link, alt } }">
+  <div v-slot:loader>Loading…</div>
+  <div v-slot:content="{ url: { link, alt } }">
     <img :src="link" :alt="alt">
   </div>
 </VuePureLightbox>
