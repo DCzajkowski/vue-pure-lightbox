@@ -2,7 +2,7 @@
   "name": "vue-pure-lightbox",
   "version": "2.1.9",
   "description": "Very lightweight, JavaScript-only, lightbox plugin for Vue.js",
-  "main": "dist/vue-pure-lightbox.common.js",
+  "main": "dist/VuePureLightbox.common.js",
   "scripts": {
     "prepare": "npm run build",
     "serve": "vue-cli-service serve",
