@@ -31,23 +31,23 @@ npm i vue-pure-lightbox --save
 ### With a CDN:
 ```html
 <!-- In <head> -->
-<meta rel="stylesheet" href="https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox.css">
+<meta rel="stylesheet" href="https://unpkg.com/vue-pure-lightbox/dist/VuePureLightbox.css">
 <!-- In <body>, after Vue import -->
-<script src="https://unpkg.com/vue-pure-lightbox/dist/vue-pure-lightbox.js"></script>
+<script src="https://unpkg.com/vue-pure-lightbox/dist/VuePureLightbox.umd.min.js"></script>
 ```
 
 ## Usage
 ### With an ES6 bundler (via NPM)
 In your index file
 ```js
-import Lightbox from 'vue-pure-lightbox'
-Vue.use(Lightbox)
+import VuePureLightbox from 'vue-pure-lightbox'
+Vue.use(VuePureLightbox)
 ```
 
 ### With a CDN
 ```html
 <script>
-  Vue.use(Lightbox)
+  Vue.use(VuePureLightbox)
 
   new Vue({
     // ...
@@ -60,30 +60,27 @@ Vue.use(Lightbox)
 ### Simple example
 
 ```vue
-<lightbox
+<VuePureLightbox
   thumbnail="/path/to/thumbnail.jpg"
   :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
->
-  <lightbox-default-loader slot="loader"></lightbox-default-loader> <!-- If you want to use built-in loader -->
-  <!-- <div slot="loader"></div> --> <!-- If you want to use your own loader -->
-</lightbox>
+/>
 ```
 
-### Simple example with content slot
+### Example using content slot and custom loader
 
 ```vue
-<lightbox
+<VuePureLightbox
   thumbnail="https://via.placeholder.com/350x150"
   :images="[
     { link: 'https://placekitten.com/1080/910', alt: 'Cat 1' },
     { link: 'https://placekitten.com/1080/920', alt: 'Cat 2' },
   ]"
 >
-  <lightbox-default-loader slot="loader"></lightbox-default-loader>
-  <div slot="content" slot-scope="{ url: { link, alt } }">
+  <div slot:loader>Loading…</div>
+  <div slot:content="{ url: { link, alt } }">
     <img :src="link" :alt="alt">
   </div>
-</lightbox>
+</VuePureLightbox>
 ```
 
 ---
@@ -101,14 +98,14 @@ Vue.use(Lightbox)
 | Slot          | Description                                    | Default                              |
 | ------------- | ---------------------------------------------- | ------------------------------------ |
 | content       | Default value is hen you don't want a def      | &lt;img&gt; tag with src set to path |
-| loader        | DOM to be used when there is an image loading  | No loader                            |
+| loader        | DOM to be used when there is an image loading  | LightboxDefaultLoader                |
 | icon-close    | Icon to be used as a close button              | &times;                              |
 | icon-previous | Icon to be used as the "next" arrow button     | <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg> |
 | icon-next     | Icon to be used as the "previous" arrow button | <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg> |
 
 ## Contents
 This package consists of just one `.vue` file. It is meant to be as small and simple as possible.
-In return you get a `<lightbox>` Vue component that allows you to show images in a nice, responsive lightbox.
+In return you get a `<VuePureLightbox>` Vue component that allows you to show images in a nice, responsive lightbox.
 
 Supported keys:
 - Arrow right - Go to the next image

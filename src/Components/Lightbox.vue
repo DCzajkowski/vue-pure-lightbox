@@ -21,7 +21,7 @@
           </slot>
         </div>
         <div class="lightbox__image" @click.stop="">
-          <slot name="loader" v-if="$slots.loader"></slot>
+          <slot name="loader"><LightboxDefaultLoader /></slot>
 
           <slot name="content" :url="images[index]" v-if="displayImage">
             <img :src="images[index]">
@@ -47,6 +47,9 @@
 <script>
   import Vue from 'vue'
 
+  import LightboxDefaultLoader from './LightboxDefaultLoader.vue'
+  export { LightboxDefaultLoader }
+
   export default {
     props: {
       thumbnail: {
@@ -64,6 +67,7 @@
         default: false,
       },
     },
+    components: { LightboxDefaultLoader, },
     data() {
       return {
         visible: this.value,
