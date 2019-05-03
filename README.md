@@ -146,7 +146,7 @@ Supported keys:
 CSS is being used in the component, but each class is prefixed with a `lightbox` keyword. You can overwrite them as you wish.
 
 ## License
-Just use it. For free. Forever.
+[MIT](https://github.com/DCzajkowski/vue-pure-lightbox/blob/3.0.0/LICENSE)
 
 ## Issues
 If you find any bug or problem with the plugin please open an issue or create a pull request on the [Github repo](https://github.com/DCzajkowski/vue-pure-lightbox).
