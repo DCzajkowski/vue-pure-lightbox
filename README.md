@@ -10,6 +10,10 @@
   * [With a CDN](#with-a-cdn)
 * [Usage](#usage)
   * [With an ES6 bundler (via NPM)](#with-an-es6-bundler-via-npm)
+    * [Importing a component](importing-a-component)
+    * [Importing CSS styles](importing-css-styles)
+      * [Via an import](via-an-import)
+      * [Via a &lt;style&gt; tag](via-a-style-tag)
   * [With a CDN](#with-a-cdn)
   * [Simple example](#simple-example)
   * [Simple example with content slot](#simple-example-with-content-slot)
@@ -38,20 +42,42 @@ npm i vue-pure-lightbox --save
 
 ## Usage
 ### With an ES6 bundler (via NPM)
-In your index file
+
+#### Importing a component
 ```js
 import VuePureLightbox from 'vue-pure-lightbox'
-Vue.use(VuePureLightbox)
+
+/* @vue/component */
+export default {
+  components: {
+    // ...
+    VuePureLightbox,
+  },
+}
+```
+
+#### Importing CSS styles
+
+If you are using an ES6 bundler, you will need to manually import the styles.
+
+##### Via an import
+```js
+import styles from 'vue-pure-lightbox/dist/VuePureLightbox.css'
+```
+
+##### Via a &lt;style&gt; tag
+```vue
+<style src="vue-pure-lightbox/dist/VuePureLightbox.css"></style>
 ```
 
 ### With a CDN
 ```html
 <script>
-  Vue.use(VuePureLightbox)
-
   new Vue({
-    // ...
-  })
+    components: {
+      'vue-pure-lightbox': window.VuePureLightbox,
+    }
+  }).$mount('#app')
 </script>
 ```
 
@@ -65,6 +91,8 @@ Vue.use(VuePureLightbox)
   :images="['/path/to/image1.jpg', '/path/to/image1.jpg']"
 />
 ```
+
+> **Note:** if you are not using a vue-loader (e.g. you are using a CDN), you have to use the kebab-case'ing for the component i.e. `<vue-pure-lightbox>` instead of `<VuePureLightbox>`.
 
 ### Example using content slot and custom loader
 
@@ -82,6 +110,8 @@ Vue.use(VuePureLightbox)
   </div>
 </VuePureLightbox>
 ```
+
+> **Note:** if you are not using a vue-loader (e.g. you are using a CDN), you have to use the kebab-case'ing for the component i.e. `<vue-pure-lightbox>` instead of `<VuePureLightbox>`.
 
 ---
 
