@@ -46,7 +46,6 @@
 
 <script>
   import Vue from 'vue'
-
   import LightboxDefaultLoader from './LightboxDefaultLoader.vue'
   export { LightboxDefaultLoader }
 
@@ -67,7 +66,9 @@
         default: false,
       },
     },
-    components: { LightboxDefaultLoader, },
+    components: {
+      LightboxDefaultLoader,
+    },
     data() {
       return {
         visible: this.value,
