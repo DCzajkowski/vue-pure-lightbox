@@ -8,6 +8,21 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VuePureLightbox src/Components/Lightbox.vue"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCzajkowski/vue-pure-lightbox.git"
+  },
+  "keywords": [
+    "vue",
+    "vue.js",
+    "lightbox"
+  ],
+  "author": "Dariusz Czajkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DCzajkowski/vue-pure-lightbox/issues"
+  },
+  "homepage": "https://github.com/DCzajkowski/vue-pure-lightbox#readme",
   "files": [
     "dist/*",
     "src/*",
