@@ -117,12 +117,13 @@ import styles from 'vue-pure-lightbox/dist/VuePureLightbox.css'
 
 ### Available props:
 
-| Prop           | Type              | Value                                           |
-| -------------- | ----------------- | ----------------------------------------------- |
-| thumbnail      | string            | Path to a file being your thumbnail             |
-| images         | string[] or array | Array of paths to files visible in the lightbox |
-| alternate-text | string            | **(Optional)** alt="" text for your image       |
-| value          | boolean           | **(Optional)** reactive visibility prop         |
+| Prop           | Type              | Value                                                           |
+| -------------- | ----------------- | --------------------------------------------------------------- |
+| thumbnail      | string            | Path to a file being your thumbnail                             |
+| images         | string[] or array | Array of paths to files visible in the lightbox                 |
+| alternate-text | string            | **(Optional)** alt="" text for your image                       |
+| value          | boolean           | **(Optional)** reactive visibility prop                         |
+| open-at-index  | integer           | **(Optional)** index of an image to show when opening the modal |
 
 ### Available slots:
 | Slot          | Description                                    | Default                              |
