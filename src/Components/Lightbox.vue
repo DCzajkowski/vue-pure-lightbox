@@ -57,6 +57,10 @@
       images: {
         type: Array,
       },
+      openAt: {
+        type: Number,
+        default: 0,
+      },
       alternateText: {
         type: String,
         default: '',
@@ -72,7 +76,7 @@
     data() {
       return {
         visible: this.value,
-        index: 0,
+        index: this.openAt,
         displayImage: true,
       }
     },
@@ -95,11 +99,11 @@
     methods: {
       show() {
         this.visible = true
-        this.index = 0
+        this.index = this.openAt
       },
       hide() {
         this.visible = false
-        this.index = 0
+        this.index = this.openAt
       },
       previous() {
         if (this.hasPrevious) {
