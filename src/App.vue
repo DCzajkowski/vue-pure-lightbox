@@ -3,7 +3,7 @@
     class="lb-demo"
     :thumbnail="thumbnail"
     :images="images"
-    :openAt="1"
+    :openAtIndex="1"
   >
     <LightboxDefaultLoader slot="loader" />
     <div slot="content" slot-scope="{ url }">
