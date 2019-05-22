@@ -16,7 +16,7 @@
       * [Via a &lt;style&gt; tag](#via-a-style-tag)
   * [With a CDN](#with-a-cdn)
   * [Simple example](#simple-example)
-  * [Simple example with content slot](#simple-example-with-content-slot)
+  * [Example using content slot and custom loader](#example-using-content-slot-and-custom-loader)
   * [Available props](#available-props)
   * [Available slots](#available-slots)
 * [Contents](#contents)
