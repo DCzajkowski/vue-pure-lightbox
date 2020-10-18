@@ -1,8 +1,10 @@
 <template>
   <div>
-    <a :href="images[0]" target="_blank" @click.prevent="show" class="lightbox__thumbnail">
-      <img :src="thumbnail" :alt="alternateText">
-    </a>
+    <slot name="preview" :show="show">
+      <a v-if="thumbnail" :href="images[0]" target="_blank" @click.prevent="show" class="lightbox__thumbnail">
+        <img :src="thumbnail" :alt="alternateText">
+      </a>
+    </slot>
     <div class="lightbox" v-if="visible" @click="hide">
       <div class="lightbox__close" @click="hide">
         <slot name="icon-close">&times;</slot>
@@ -53,6 +55,7 @@
     props: {
       thumbnail: {
         type: String,
+        default: null,
       },
       images: {
         type: Array,

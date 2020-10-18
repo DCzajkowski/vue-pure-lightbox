@@ -17,6 +17,9 @@
       />
       <img v-else :src="url">
     </div>
+    <button slot="preview" slot-scope="{ show }" @click="show">
+      Open
+    </button>
   </Lightbox>
 </template>
 

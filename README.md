@@ -126,13 +126,14 @@ import styles from 'vue-pure-lightbox/dist/VuePureLightbox.css'
 | open-at-index  | integer           | **(Optional)** index of an image to show when opening the modal |
 
 ### Available slots:
-| Slot          | Description                                    | Default                                   |
-| ------------- | ---------------------------------------------- | ----------------------------------------- |
-| content       | Default value is hen you don't want a def      | &lt;img&gt; tag with src set to path      |
-| loader        | DOM to be used when there is an image loading  | LightboxDefaultLoader                     |
-| icon-close    | Icon to be used as a close button              | &times; (&amp;times;)                     |
-| icon-previous | Icon to be used as the "next" arrow button     | ![](https://i.imgur.com/HcdxJmd.png)(svg) |
-| icon-next     | Icon to be used as the "previous" arrow button | ![](https://i.imgur.com/oErSVk3.png)(svg) |
+| Slot          | Description                                      | Default                                   |
+| ------------- | ------------------------------------------------ | ----------------------------------------- |
+| content       | Default value is hen you don't want a def        | &lt;img&gt; tag with src set to path      |
+| loader        | DOM to be used when there is an image loading    | LightboxDefaultLoader                     |
+| icon-close    | Icon to be used as a close button                | &times; (&amp;times;)                     |
+| icon-previous | Icon to be used as the "next" arrow button       | ![](https://i.imgur.com/HcdxJmd.png)(svg) |
+| icon-next     | Icon to be used as the "previous" arrow button   | ![](https://i.imgur.com/oErSVk3.png)(svg) |
+| preview       | DOM to be used in place of the default thumbnail | Clickable link with a thumbnail |
 
 ## Contents
 This package consists of just one `.vue` file. It is meant to be as small and simple as possible.
