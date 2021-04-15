@@ -3,6 +3,10 @@
 <a href="https://www.npmjs.com/package/vue-pure-lightbox"><img src="https://img.shields.io/npm/v/vue-pure-lightbox.svg" alt="Version"></a>
 <a href="https://spdx.org/licenses/MIT.html"><img src="https://img.shields.io/npm/l/vue-pure-lightbox.svg" alt="License"></a>
 
+## Disclaimer
+
+This package is not WCAG-compliant yet. It was created when the author was not aware of how important it is to be fully accessible. Proceed with caution.
+
 ## Table of contents
 * [Demo](#demo)
 * [Installation](#installation)
