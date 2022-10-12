@@ -108,10 +108,10 @@ import styles from 'vue-pure-lightbox/dist/VuePureLightbox.css'
     { link: 'https://placekitten.com/1080/920', alt: 'Cat 2' },
   ]"
 >
-  <div v-slot:loader>Loading…</div>
-  <div v-slot:content="{ url: { link, alt } }">
+  <template v-slot:loader>Loading…</template>
+  <template v-slot:content="{ url: { link, alt } }">
     <img :src="link" :alt="alt">
-  </div>
+  </template>
 </VuePureLightbox>
 ```
 
